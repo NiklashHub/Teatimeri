@@ -1,0 +1,31 @@
+{
+  "name": "Tea Timer",
+  "short_name": "TeaTimer",
+  "description": "A timer for brewing the perfect cup of tea",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#8ab39e",
+  "background_color": "#121212",
+  "icons": [
+    {
+      "src": "img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icon-500x500.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null,
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://teatimer.neocities.org/"
+    }
+  ]
+}

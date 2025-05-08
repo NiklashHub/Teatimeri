@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tea-image">
+            <img src="img/teekuppinen.png" alt="Tea cup" id="tea-cup">
+        </div>
+
+        <h1 data-i18n="title">Tea Timer <i class="fas fa-leaf"></i></h1>
+
+        <div class="lang-selector" style="margin-bottom: 20px;">
+            <select id="language-select">
+                <option value="en">🇬🇧 English</option>
+                <option value="fi">🇫🇮 Suomi</option>
+            </select>
+        </div>
+
+        <div class="tea-selector">
+            <label for="tea-type" data-i18n="select_tea"><i class="fas fa-mug-hot"></i> Select Tea Type:</label>
+            <select id="tea-type">
+                <option value="black" data-i18n-option="black">Black Tea</option>
+                <option value="green" data-i18n-option="green">Green Tea</option>
+                <option value="white" data-i18n-option="white">White Tea</option>
+                <option value="oolong" data-i18n-option="oolong">Oolong Tea</option>
+                <option value="herbal" data-i18n-option="herbal">Herbal Tea</option>
+                <option value="rooibos" data-i18n-option="rooibos">Rooibos</option>
+                <option value="testi" data-i18n-option="testi">testi</option>
+            </select>
+        </div>
+
+        <div class="progress-container">
+            <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-circle" cx="100" cy="100" r="90" fill="transparent" stroke="#8ab39e"
+                    stroke-width="10" stroke-dasharray="565" stroke-dashoffset="565" />
+            </svg>
+            <div class="timer-container">
+                <div class="timer-display" id="timer">03:00</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" data-i18n="start"><i class="fas fa-play"></i> Start</button>
+            <button id="reset-btn" data-i18n="reset"><i class="fas fa-redo"></i> Reset</button>
+        </div>
+
+        <div class="tea-info" id="tea-info">
+            <h3><i class="fas fa-info-circle"></i> Black Tea Info</h3>
+            <p><i class="fas fa-clock"></i> Brewing time: 3-5 minutes</p>
+            <p><i class="fas fa-temperature-high"></i> Water temperature: 95-100°C</p>
+        </div>
+
+        <audio id="timer-sound" src="https://raw.githubusercontent.com/NiklashHub/Teetimer/main/notification.ogg"
+            preload="auto"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
